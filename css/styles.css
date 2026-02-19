@@ -293,7 +293,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .nav.scrolled {
-  background: rgba(247, 245, 240, 0.82);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 1px 0 var(--clr-border), var(--shadow-sm);
@@ -715,7 +715,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   transition: color var(--trans-fast);
 }
 
-.project-card__title a:hover { color: var(--clr-gold); }
+.project-card__title a:hover { color: var(--clr-secondary); }
 
 .project-card__desc {
   font-size: var(--fs-sm);
