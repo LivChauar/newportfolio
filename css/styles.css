@@ -7,18 +7,19 @@
 /* ── 0. CUSTOM PROPERTIES ─────────────────────────────────── */
 :root {
   /* Palette */
-  --clr-bg:          #F7F5F0;
-  --clr-bg-alt:      #EEEAE2;
+  --clr-bg:          #FFFFFF;
+  --clr-bg-alt:      #F4F4F4;
   --clr-surface:     #FFFFFF;
-  --clr-surface-2:   rgba(255, 255, 255, 0.72);
-  --clr-text:        #0D0C0A;
-  --clr-text-2:      #6E6A63;
-  --clr-text-3:      #A09B93;
-  --clr-accent:      #1A1917;
-  --clr-gold:        #B8975A;
-  --clr-gold-light:  #E8D5B0;
-  --clr-border:      rgba(0, 0, 0, 0.08);
-  --clr-border-2:    rgba(0, 0, 0, 0.04);
+  --clr-surface-2:   rgba(255, 255, 255, 0.85);
+  --clr-text:        #000000;
+  --clr-text-2:      #444444;
+  --clr-text-3:      #888888;
+  --clr-accent:      #000000;
+  --clr-gold:        #68E59C;
+  --clr-gold-light:  rgba(104, 229, 156, 0.18);
+  --clr-secondary:   #00BDF5;
+  --clr-border:      rgba(0, 0, 0, 0.10);
+  --clr-border-2:    rgba(0, 0, 0, 0.05);
 
   /* Project card palette */
   --proj-1: #1C2B3A;
@@ -171,7 +172,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .section-title em {
   font-style: italic;
-  color: var(--clr-gold);
+  color: var(--clr-secondary);
 }
 
 .section-sub {
@@ -227,7 +228,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .btn--primary {
   background: var(--clr-accent);
   color: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15), 0 0 0 0 rgba(184,151,90,0);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15), 0 0 0 0 rgba(104,229,156,0);
 }
 .btn--primary .ripple { background: rgba(255,255,255,0.25); }
 .btn--primary:hover {
@@ -454,7 +455,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .hero__orb--1 {
   width: min(700px, 80vw);
   height: min(700px, 80vw);
-  background: radial-gradient(circle, rgba(184,151,90,0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(104,229,156,0.14) 0%, transparent 70%);
   top: -15%;
   right: -10%;
   animation: orb-float-1 12s ease-in-out infinite;
@@ -472,7 +473,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .hero__orb--3 {
   width: min(300px, 50vw);
   height: min(300px, 50vw);
-  background: radial-gradient(circle, rgba(184,151,90,0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0,189,245,0.10) 0%, transparent 70%);
   top: 40%;
   left: 40%;
   animation: orb-float-3 18s ease-in-out infinite;
@@ -522,14 +523,14 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #4ade80;
-  box-shadow: 0 0 0 2px rgba(74, 222, 128, 0.2);
+  background: var(--clr-gold);
+  box-shadow: 0 0 0 2px rgba(104, 229, 156, 0.25);
   animation: pulse-dot 2.5s ease infinite;
 }
 
 @keyframes pulse-dot {
-  0%, 100% { box-shadow: 0 0 0 2px rgba(74,222,128,0.2); }
-  50% { box-shadow: 0 0 0 5px rgba(74,222,128,0.08); }
+  0%, 100% { box-shadow: 0 0 0 2px rgba(104,229,156,0.25); }
+  50% { box-shadow: 0 0 0 5px rgba(104,229,156,0.10); }
 }
 
 .hero__title {
@@ -754,8 +755,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 100% 100%, rgba(184,151,90,0.07) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 50% at 0% 0%, rgba(184,151,90,0.05) 0%, transparent 60%);
+    radial-gradient(ellipse 80% 60% at 100% 100%, rgba(104,229,156,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 0% 0%, rgba(0,189,245,0.06) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -810,7 +811,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .about-preview__photo {
   aspect-ratio: 3 / 4;
   max-height: 460px;
-  background: linear-gradient(145deg, #D4CFC7 0%, #E8E4DC 100%);
+  background: linear-gradient(145deg, #E2E2E2 0%, #EEEEEE 100%);
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
@@ -1038,7 +1039,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .page-hero__title em {
   font-style: italic;
-  color: var(--clr-gold);
+  color: var(--clr-secondary);
 }
 
 .page-hero__intro {
