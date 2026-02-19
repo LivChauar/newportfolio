@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CMT Risk Score — Case study by Alex Doe. A predictive risk scoring tool for clinical medication therapy management." />
+  <title>CMT Risk Score — Alex Doe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <!-- ░░ NAVIGATION ░░ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo" aria-label="Home">
+        <span class="nav__logo-mark">AD</span>
+        <span class="nav__logo-name">Alex Doe</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary navigation">
+        <a href="../index.html#work" class="nav__link">Work</a>
+        <a href="../about.html" class="nav__link">About</a>
+        <a href="../projects.html" class="nav__link">All Projects</a>
+        <a href="mailto:hello@alexdoe.com" class="nav__cta btn btn--outline">Let's Talk</a>
+      </nav>
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-menu__links">
+      <a href="../index.html#work" class="mobile-menu__link">Work</a>
+      <a href="../about.html" class="mobile-menu__link">About</a>
+      <a href="../projects.html" class="mobile-menu__link">All Projects</a>
+      <a href="mailto:hello@alexdoe.com" class="mobile-menu__link mobile-menu__link--cta">Let's Talk</a>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- ░░ CASE HERO ░░ -->
+    <section class="case-hero" aria-label="Project overview">
+      <div class="container">
+
+        <div class="case-hero__meta reveal-fade">
+          <a href="../projects.html" class="case-hero__back">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H3M7 12l-4-4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            All projects
+          </a>
+          <span class="tag">Healthcare</span>
+          <span class="tag">Data Visualization</span>
+        </div>
+
+        <h1 class="case-hero__title reveal-up">CMT Risk Score</h1>
+        <p class="case-hero__sub reveal-fade" style="--delay: 0.1s">
+          Translating complex clinical medication data into a clear, actionable risk score that helps pharmacists intervene before adverse events occur.
+        </p>
+
+        <div class="case-meta-grid reveal-fade" style="--delay: 0.2s">
+          <div class="case-meta-item">
+            <span class="case-meta-item__label">Role</span>
+            <span class="case-meta-item__value">Lead Product Designer</span>
+          </div>
+          <div class="case-meta-item">
+            <span class="case-meta-item__label">Timeline</span>
+            <span class="case-meta-item__value">5 months</span>
+          </div>
+          <div class="case-meta-item">
+            <span class="case-meta-item__label">Platform</span>
+            <span class="case-meta-item__value">Web (SaaS)</span>
+          </div>
+          <div class="case-meta-item">
+            <span class="case-meta-item__label">Team</span>
+            <span class="case-meta-item__value">1 Designer, 3 Engineers, 1 PM</span>
+          </div>
+        </div>
+
+        <!-- Cover image -->
+        <div class="case-cover project-card__img--1 reveal-up" style="--delay: 0.25s" aria-label="CMT Risk Score interface preview" role="img">
+          <div class="project-card__img-inner"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ░░ CASE BODY ░░ -->
+    <section class="case-body" aria-label="Case study content">
+      <div class="container">
+        <div class="case-body__inner">
+
+          <div class="case-section reveal-up">
+            <h2>The Problem</h2>
+            <p>
+              Clinical pharmacists at large health systems were spending an average of 4.2 hours per shift manually reviewing patient medication lists to identify high-risk individuals. The process was inconsistent, time-intensive, and entirely dependent on individual pharmacist expertise — leading to missed interventions and patient safety events.
+            </p>
+            <p>
+              The product team had access to rich claims and EHR data that could power a predictive model. The challenge: how do you surface a complex algorithmic output in a way that a busy clinician trusts and acts on?
+            </p>
+          </div>
+
+          <div class="case-callout reveal-fade">
+            <p>"How might we give pharmacists the right signal, at the right moment, with enough context to act confidently?"</p>
+          </div>
+
+          <div class="case-section reveal-up">
+            <h2>Discovery &amp; Research</h2>
+            <p>
+              I conducted 14 contextual inquiry sessions across 3 health systems, shadowing pharmacists during their shifts. Key findings:
+            </p>
+            <ul>
+              <li>Pharmacists trusted their instincts over algorithms they couldn't interrogate.</li>
+              <li>Numeric scores alone created anxiety — they needed to understand the "why."</li>
+              <li>Time pressure meant any new tool had to fit into an existing workflow in under 30 seconds per patient.</li>
+              <li>Color-coding for risk had accessibility implications that existing tools ignored.</li>
+            </ul>
+          </div>
+
+          <div class="case-image-block project-card__img--1 reveal-up">
+            <div class="project-card__img-inner"></div>
+          </div>
+
+          <div class="case-section reveal-up">
+            <h2>Design Decisions</h2>
+            <p>
+              The core design principle was <strong>explainability over confidence</strong>. The risk score is never shown as a single number. Instead, it surfaces as a tiered indicator (Low / Moderate / High) accompanied by the top 3 contributing factors, each with a plain-language rationale.
+            </p>
+            <p>
+              I designed a progressive disclosure model: the summary card lives in the existing patient list view, while a detailed breakdown opens in a side panel — never navigating away from the patient context. This kept the average interaction time under 22 seconds.
+            </p>
+            <p>
+              Accessibility drove color decisions. I used shape and iconography in addition to color for risk indicators, with a contrast ratio exceeding WCAG AA across all states, verified with real assistive technology testing.
+            </p>
+          </div>
+
+          <div class="case-section reveal-up">
+            <h2>Outcome</h2>
+            <ul>
+              <li>Adopted by 94% of pharmacists within the first 6 weeks of launch.</li>
+              <li>Average risk-review time dropped from 4.2 hrs to 1.8 hrs per shift.</li>
+              <li>Clinician-reported confidence in intervention decisions increased by 37%.</li>
+              <li>Zero critical accessibility issues flagged in post-launch audit.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ NEXT CASE ░░ -->
+    <section class="next-case" aria-label="Next project">
+      <div class="container">
+        <p class="next-case__label">Next project</p>
+        <a href="review-center.html" class="next-case__link">
+          <h2 class="next-case__title">Review Center →</h2>
+          <p style="color: var(--clr-text-2); font-size: var(--fs-md); margin-top: var(--space-2);">Workflow Design · Healthcare · Enterprise</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="footer" aria-label="Footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="../index.html" class="nav__logo">
+            <span class="nav__logo-mark">AD</span>
+            <span class="nav__logo-name">Alex Doe</span>
+          </a>
+          <p class="footer__tagline">Designing with purpose.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <div class="footer__nav-col">
+            <span class="footer__nav-heading">Navigation</span>
+            <a href="../index.html#work">Work</a>
+            <a href="../about.html">About</a>
+            <a href="../projects.html">All Projects</a>
+          </div>
+          <div class="footer__nav-col">
+            <span class="footer__nav-heading">Projects</span>
+            <a href="cmt-risk-score.html">CMT Risk Score</a>
+            <a href="review-center.html">Review Center</a>
+            <a href="driving-insights.html">Driving Insights</a>
+            <a href="insurance-card.html">Insurance Card</a>
+          </div>
+          <div class="footer__nav-col">
+            <span class="footer__nav-heading">Connect</span>
+            <a href="mailto:hello@alexdoe.com">Email</a>
+            <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="#" target="_blank" rel="noopener">Dribbble</a>
+            <a href="#" target="_blank" rel="noopener">Read.cv</a>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">&copy; 2025 Alex Doe. All rights reserved.</span>
+        <button class="footer__top-btn" id="backToTop" aria-label="Back to top">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3M3 8l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back to top
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
