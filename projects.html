@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="All projects by Alex Doe — Product Designer." />
+  <title>All Projects — Alex Doe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ░░ NAVIGATION ░░ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Home">
+        <span class="nav__logo-mark">AD</span>
+        <span class="nav__logo-name">Alex Doe</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary navigation">
+        <a href="index.html#work" class="nav__link">Work</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="projects.html" class="nav__link">All Projects</a>
+        <a href="mailto:hello@alexdoe.com" class="nav__cta btn btn--outline">Let's Talk</a>
+      </nav>
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-menu__links">
+      <a href="index.html#work" class="mobile-menu__link">Work</a>
+      <a href="about.html" class="mobile-menu__link">About</a>
+      <a href="projects.html" class="mobile-menu__link">All Projects</a>
+      <a href="mailto:hello@alexdoe.com" class="mobile-menu__link mobile-menu__link--cta">Let's Talk</a>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- ░░ INTRO ░░ -->
+    <section class="projects-intro" aria-label="Projects introduction">
+      <div class="container">
+        <div class="projects-intro__grid">
+          <div>
+            <span class="section-label reveal-fade">All Work</span>
+            <h1 class="section-title reveal-up" style="font-size: clamp(2rem, 5vw, 3.5rem);">
+              Every project<br /><em>tells a story.</em>
+            </h1>
+          </div>
+          <div class="reveal-fade" style="--delay: 0.15s; align-self: end; padding-bottom: 0.25rem;">
+            <p class="section-sub">
+              A curated collection of end-to-end design work across healthcare,
+              automotive, and fintech — from first principle to final pixel.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ PROJECTS GRID ░░ -->
+    <section class="work" style="padding-top: var(--space-4);" aria-label="Project list">
+      <div class="container">
+        <div class="projects-grid" style="grid-template-columns: repeat(2, 1fr);">
+
+          <!-- Project 1 -->
+          <article class="project-card reveal-up" style="--delay: 0.05s">
+            <a href="projects/cmt-risk-score.html" class="project-card__link" tabindex="-1" aria-hidden="true"></a>
+            <div class="project-card__media">
+              <div class="project-card__img project-card__img--1">
+                <div class="project-card__img-inner"></div>
+              </div>
+              <div class="project-card__overlay">
+                <a href="projects/cmt-risk-score.html" class="btn btn--glass">View case study</a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__num">01</span>
+              <h2 class="project-card__title">
+                <a href="projects/cmt-risk-score.html">CMT Risk Score</a>
+              </h2>
+              <p class="project-card__desc">A predictive risk scoring tool for clinical medication therapy management, translating complex data into actionable clinical decisions.</p>
+              <div class="project-card__tags">
+                <span class="tag">Healthcare</span>
+                <span class="tag">Data Visualization</span>
+                <span class="tag">SaaS</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card reveal-up" style="--delay: 0.15s">
+            <a href="projects/review-center.html" class="project-card__link" tabindex="-1" aria-hidden="true"></a>
+            <div class="project-card__media">
+              <div class="project-card__img project-card__img--2">
+                <div class="project-card__img-inner"></div>
+              </div>
+              <div class="project-card__overlay">
+                <a href="projects/review-center.html" class="btn btn--glass">View case study</a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__num">02</span>
+              <h2 class="project-card__title">
+                <a href="projects/review-center.html">Review Center</a>
+              </h2>
+              <p class="project-card__desc">A centralized review and approval workflow designed to reduce friction for clinical teams managing high volumes of patient medication reviews.</p>
+              <div class="project-card__tags">
+                <span class="tag">Workflow Design</span>
+                <span class="tag">Healthcare</span>
+                <span class="tag">Enterprise</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card reveal-up" style="--delay: 0.25s">
+            <a href="projects/driving-insights.html" class="project-card__link" tabindex="-1" aria-hidden="true"></a>
+            <div class="project-card__media">
+              <div class="project-card__img project-card__img--3">
+                <div class="project-card__img-inner"></div>
+              </div>
+              <div class="project-card__overlay">
+                <a href="projects/driving-insights.html" class="btn btn--glass">View case study</a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__num">03</span>
+              <h2 class="project-card__title">
+                <a href="projects/driving-insights.html">Driving Insights</a>
+              </h2>
+              <p class="project-card__desc">A telematics dashboard bringing real-time driving behavior analysis to fleet managers and individual drivers through accessible data storytelling.</p>
+              <div class="project-card__tags">
+                <span class="tag">Automotive</span>
+                <span class="tag">Telematics</span>
+                <span class="tag">Dashboard</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card reveal-up" style="--delay: 0.35s">
+            <a href="projects/insurance-card.html" class="project-card__link" tabindex="-1" aria-hidden="true"></a>
+            <div class="project-card__media">
+              <div class="project-card__img project-card__img--4">
+                <div class="project-card__img-inner"></div>
+              </div>
+              <div class="project-card__overlay">
+                <a href="projects/insurance-card.html" class="btn btn--glass">View case study</a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__num">04</span>
+              <h2 class="project-card__title">
+                <a href="projects/insurance-card.html">Insurance Card</a>
+              </h2>
+              <p class="project-card__desc">A digital insurance card experience that replaces a physical card with a frictionless, accessible mobile interface for insurance verification.</p>
+              <div class="project-card__tags">
+                <span class="tag">Fintech</span>
+                <span class="tag">Mobile</span>
+                <span class="tag">Accessibility</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="footer" aria-label="Footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo">
+            <span class="nav__logo-mark">AD</span>
+            <span class="nav__logo-name">Alex Doe</span>
+          </a>
+          <p class="footer__tagline">Designing with purpose.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <div class="footer__nav-col">
+            <span class="footer__nav-heading">Navigation</span>
+            <a href="index.html#work">Work</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">All Projects</a>
+          </div>
+          <div class="footer__nav-col">
+            <span class="footer__nav-heading">Projects</span>
+            <a href="projects/cmt-risk-score.html">CMT Risk Score</a>
+            <a href="projects/review-center.html">Review Center</a>
+            <a href="projects/driving-insights.html">Driving Insights</a>
+            <a href="projects/insurance-card.html">Insurance Card</a>
+          </div>
+          <div class="footer__nav-col">
+            <span class="footer__nav-heading">Connect</span>
+            <a href="mailto:hello@alexdoe.com">Email</a>
+            <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="#" target="_blank" rel="noopener">Dribbble</a>
+            <a href="#" target="_blank" rel="noopener">Read.cv</a>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">&copy; 2025 Alex Doe. All rights reserved.</span>
+        <button class="footer__top-btn" id="backToTop" aria-label="Back to top">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3M3 8l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back to top
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

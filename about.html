@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Alex Doe — Product Designer with 6+ years crafting digital products across healthcare, automotive, and fintech." />
+  <title>About — Alex Doe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* ── About Page Extras ── */
+    .about-page-photo {
+      aspect-ratio: 3 / 4;
+      max-height: 520px;
+      background: linear-gradient(145deg, #D4CFC7 0%, #E8E4DC 100%);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    .about-page-photo::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.08));
+      border-radius: inherit;
+    }
+
+    .cta-section {
+      padding-block: clamp(var(--space-16), 10vw, var(--space-32));
+      text-align: center;
+      background: var(--clr-bg-alt);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(184,151,90,0.08), transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-section__inner { position: relative; z-index: 1; }
+
+    .cta-section__pre {
+      font-size: var(--fs-xs);
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--clr-gold);
+      margin-bottom: var(--space-5);
+    }
+
+    .cta-section__title {
+      font-family: var(--ff-serif);
+      font-size: clamp(var(--fs-2xl), 4vw, var(--fs-4xl));
+      font-weight: 400;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      margin-bottom: var(--space-6);
+    }
+
+    .cta-section__sub {
+      font-size: var(--fs-md);
+      color: var(--clr-text-2);
+      max-width: 44ch;
+      margin-inline: auto;
+      margin-bottom: var(--space-10);
+      line-height: 1.7;
+    }
+
+    .cta-section__actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ░░ NAVIGATION ░░ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Home">
+        <span class="nav__logo-mark">AD</span>
+        <span class="nav__logo-name">Alex Doe</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary navigation">
+        <a href="index.html#work" class="nav__link">Work</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="projects.html" class="nav__link">All Projects</a>
+        <a href="mailto:hello@alexdoe.com" class="nav__cta btn btn--outline">Let's Talk</a>
+      </nav>
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-menu__links">
+      <a href="index.html#work" class="mobile-menu__link">Work</a>
+      <a href="about.html" class="mobile-menu__link">About</a>
+      <a href="projects.html" class="mobile-menu__link">All Projects</a>
+      <a href="mailto:hello@alexdoe.com" class="mobile-menu__link mobile-menu__link--cta">Let's Talk</a>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- ░░ PAGE HERO ░░ -->
+    <section class="page-hero" aria-label="About introduction">
+      <div class="container">
+        <div class="about-preview__grid">
+
+          <div>
+            <span class="section-label page-hero__label reveal-fade">About Me</span>
+            <h1 class="page-hero__title reveal-up">
+              Designing<br /><em>products</em><br />that endure.
+            </h1>
+            <p class="page-hero__intro reveal-fade" style="--delay: 0.15s">
+              I'm Alex Doe, a Product Designer based in New York. I specialize in translating complex systems into elegant, user-centered interfaces — particularly in regulated industries where clarity and trust are non-negotiable.
+            </p>
+          </div>
+
+          <div class="reveal-up" style="--delay: 0.2s">
+            <div class="about-page-photo" aria-label="Alex Doe — Profile photo">
+              <svg width="72" height="72" viewBox="0 0 72 72" fill="none" aria-hidden="true">
+                <circle cx="36" cy="27" r="13" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M8 64c0-15.464 12.536-28 28-28s28 12.536 28 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ ABOUT SECTIONS ░░ -->
+    <div class="container">
+
+      <!-- Story -->
+      <section class="about-section" aria-labelledby="story-heading">
+        <div class="about-section__grid">
+          <span class="about-section__label reveal-fade">Story</span>
+          <div class="about-section__body reveal-up">
+            <h2 id="story-heading">How I got here</h2>
+            <p>
+              I started my career in graphic design before discovering a deep pull toward
+              the behavioral and strategic side of design. That curiosity led me to UX —
+              first at an agency, then in-house at a Series B healthtech startup, and now
+              as a senior IC working across multiple product areas.
+            </p>
+            <p>
+              Along the way I've worked with clinical teams, fleet managers, insurance
+              administrators, and end consumers — each context sharpening my instincts
+              for what "intuitive" really means in practice.
+            </p>
+            <p>
+              Outside of work I sketch, obsess over typography, and take long walks with
+              no destination. I believe the best ideas arrive sideways.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="about-section" aria-labelledby="process-heading">
+        <div class="about-section__grid">
+          <span class="about-section__label reveal-fade">Process</span>
+          <div class="about-section__body reveal-up">
+            <h2 id="process-heading">How I work</h2>
+            <p>
+              I'm a practitioner of the double diamond, but I'm not precious about it.
+              Every project is different. What stays constant is a commitment to evidence
+              over assumption, and craft at every fidelity level.
+            </p>
+            <p>
+              My typical engagement moves through discovery → synthesis → ideation →
+              iteration → handoff — with research and testing threaded throughout.
+              I work closely with engineers from day one so there are no surprises at
+              the finish line.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tools & Skills -->
+      <section class="about-section" aria-labelledby="tools-heading">
+        <div class="about-section__grid">
+          <span class="about-section__label reveal-fade">Tools &amp; Skills</span>
+          <div class="about-section__body reveal-up">
+            <h2 id="tools-heading">What I work with</h2>
+            <p>
+              Tools are a means to an end. That said, I'm fluent in the modern product
+              design stack and move quickly across disciplines.
+            </p>
+            <div class="tools-grid">
+              <div class="tool-item">Figma</div>
+              <div class="tool-item">FigJam</div>
+              <div class="tool-item">Protopie</div>
+              <div class="tool-item">Maze</div>
+              <div class="tool-item">Notion</div>
+              <div class="tool-item">Lottie</div>
+              <div class="tool-item">Storybook</div>
+              <div class="tool-item">Zeroheight</div>
+              <div class="tool-item">Framer</div>
+              <div class="tool-item">Miro</div>
+              <div class="tool-item">HTML/CSS</div>
+              <div class="tool-item">Linear</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Values -->
+      <section class="about-section" aria-labelledby="values-heading">
+        <div class="about-section__grid">
+          <span class="about-section__label reveal-fade">Values</span>
+          <div class="about-section__body reveal-up">
+            <h2 id="values-heading">What I believe in</h2>
+            <ul>
+              <li>Design is a team sport. The best outcomes come from shared ownership.</li>
+              <li>Constraints are an invitation to be creative, not an obstacle.</li>
+              <li>Accessibility is not a feature — it is the baseline.</li>
+              <li>Clarity of thinking leads to clarity of design.</li>
+              <li>Shipping imperfect work on time beats perfect work too late.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /.container -->
+
+    <!-- ░░ CTA ░░ -->
+    <section class="cta-section" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta-section__inner reveal-up">
+          <p class="cta-section__pre">Let's work together</p>
+          <h2 class="cta-section__title" id="cta-heading">Have a project in mind?</h2>
+          <p class="cta-section__sub">
+            I'm always open to discussing meaningful design problems.
+            Drop me an email and let's find out if we're a good fit.
+          </p>
+          <div class="cta-section__actions">
+            <a href="mailto:hello@alexdoe.com" class="btn btn--primary btn--large">Say hello</a>
+            <a href="projects.html" class="btn btn--outline btn--large">View my work</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="footer" aria-label="Footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo">
+            <span class="nav__logo-mark">AD</span>
+            <span class="nav__logo-name">Alex Doe</span>
+          </a>
+          <p class="footer__tagline">Designing with purpose.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <div class="footer__nav-col">
+            <span class="footer__nav-heading">Navigation</span>
+            <a href="index.html#work">Work</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">All Projects</a>
+          </div>
+          <div class="footer__nav-col">
+            <span class="footer__nav-heading">Projects</span>
+            <a href="projects/cmt-risk-score.html">CMT Risk Score</a>
+            <a href="projects/review-center.html">Review Center</a>
+            <a href="projects/driving-insights.html">Driving Insights</a>
+            <a href="projects/insurance-card.html">Insurance Card</a>
+          </div>
+          <div class="footer__nav-col">
+            <span class="footer__nav-heading">Connect</span>
+            <a href="mailto:hello@alexdoe.com">Email</a>
+            <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="#" target="_blank" rel="noopener">Dribbble</a>
+            <a href="#" target="_blank" rel="noopener">Read.cv</a>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">&copy; 2025 Alex Doe. All rights reserved.</span>
+        <button class="footer__top-btn" id="backToTop" aria-label="Back to top">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3M3 8l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back to top
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

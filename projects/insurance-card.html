@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Insurance Card — Case study by Alex Doe. A digital insurance card experience for frictionless mobile verification." />
+  <title>Insurance Card — Alex Doe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <!-- ░░ NAVIGATION ░░ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo" aria-label="Home">
+        <span class="nav__logo-mark">AD</span>
+        <span class="nav__logo-name">Alex Doe</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary navigation">
+        <a href="../index.html#work" class="nav__link">Work</a>
+        <a href="../about.html" class="nav__link">About</a>
+        <a href="../projects.html" class="nav__link">All Projects</a>
+        <a href="mailto:hello@alexdoe.com" class="nav__cta btn btn--outline">Let's Talk</a>
+      </nav>
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-menu__links">
+      <a href="../index.html#work" class="mobile-menu__link">Work</a>
+      <a href="../about.html" class="mobile-menu__link">About</a>
+      <a href="../projects.html" class="mobile-menu__link">All Projects</a>
+      <a href="mailto:hello@alexdoe.com" class="mobile-menu__link mobile-menu__link--cta">Let's Talk</a>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- ░░ CASE HERO ░░ -->
+    <section class="case-hero" aria-label="Project overview">
+      <div class="container">
+
+        <div class="case-hero__meta reveal-fade">
+          <a href="../projects.html" class="case-hero__back">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H3M7 12l-4-4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            All projects
+          </a>
+          <span class="tag">Fintech</span>
+          <span class="tag">Mobile</span>
+          <span class="tag">Accessibility</span>
+        </div>
+
+        <h1 class="case-hero__title reveal-up">Insurance Card</h1>
+        <p class="case-hero__sub reveal-fade" style="--delay: 0.1s">
+          Replacing a physical insurance card with a mobile-first, accessible digital experience that works when it needs to — at the roadside, in a clinic, or in a low-signal zone.
+        </p>
+
+        <div class="case-meta-grid reveal-fade" style="--delay: 0.2s">
+          <div class="case-meta-item">
+            <span class="case-meta-item__label">Role</span>
+            <span class="case-meta-item__value">Lead Product Designer</span>
+          </div>
+          <div class="case-meta-item">
+            <span class="case-meta-item__label">Timeline</span>
+            <span class="case-meta-item__value">4 months</span>
+          </div>
+          <div class="case-meta-item">
+            <span class="case-meta-item__label">Platform</span>
+            <span class="case-meta-item__value">iOS + Android</span>
+          </div>
+          <div class="case-meta-item">
+            <span class="case-meta-item__label">Team</span>
+            <span class="case-meta-item__value">1 Designer, 3 Engineers, 1 PM</span>
+          </div>
+        </div>
+
+        <div class="case-cover project-card__img--4 reveal-up" style="--delay: 0.25s" aria-label="Insurance Card interface preview" role="img">
+          <div class="project-card__img-inner"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ░░ CASE BODY ░░ -->
+    <section class="case-body" aria-label="Case study content">
+      <div class="container">
+        <div class="case-body__inner">
+
+          <div class="case-section reveal-up">
+            <h2>The Opportunity</h2>
+            <p>
+              Insurance ID cards are mandated in most US states for vehicle registration and insurance verification. Despite widespread smartphone adoption, millions of people still carry physical cards — often expired, illegible, or simply not on them when needed. State laws are increasingly permitting digital versions, but existing implementations were digital replicas of physical cards: hard to read, inaccessible, and unavailable offline.
+            </p>
+            <p>
+              The business goal was to migrate 70% of policyholders to digital cards within 12 months. The design challenge was to make the digital experience unambiguously better than the physical one.
+            </p>
+          </div>
+
+          <div class="case-callout reveal-fade">
+            <p>"At 2 AM on the side of a highway in the rain, your UI has maybe 4 seconds to work. There is no room for confusion."</p>
+          </div>
+
+          <div class="case-section reveal-up">
+            <h2>Research</h2>
+            <p>
+              We surveyed 1,200 policyholders about their physical card habits and ran usability tests across 3 competitor apps with 16 participants. We also consulted with law enforcement on what they actually need to see during a roadside stop.
+            </p>
+            <ul>
+              <li>68% of users had trouble finding their physical card at the point of need.</li>
+              <li>Competitor apps buried the card 3–5 taps deep — too slow in a high-stress moment.</li>
+              <li>Officers needed 4 specific fields: policy number, insurer, effective dates, and vehicle VIN.</li>
+              <li>23% of test users had accessibility needs that existing apps completely ignored.</li>
+              <li>Offline availability was a non-negotiable — emergencies don't wait for signal.</li>
+            </ul>
+          </div>
+
+          <div class="case-image-block project-card__img--4 reveal-up">
+            <div class="project-card__img-inner"></div>
+          </div>
+
+          <div class="case-section reveal-up">
+            <h2>Design Solution</h2>
+            <p>
+              The card is accessible from the app home screen in one tap — no authentication required for the card view (we worked with legal to validate this). The card is stored locally on device for full offline access.
+            </p>
+            <p>
+              The visual design uses a large-type layout optimized for readability at arm's length in poor lighting. We ran contrast tests in direct sunlight and under harsh white light. The 4 key fields are displayed at 24px minimum with a secondary grid for additional policy details.
+            </p>
+            <p>
+              For users managing multiple vehicles, a card-flip interaction reveals additional vehicles without navigating away. The entire flow was designed with VoiceOver and TalkBack in mind from day one — not as an afterthought. Dynamic Type support means it adapts to any user's system font size preference.
+            </p>
+            <p>
+              A "Share Card" feature lets policyholders send a secure, time-limited PDF to a third party — useful for loan paperwork, car rentals, and other verification scenarios.
+            </p>
+          </div>
+
+          <div class="case-section reveal-up">
+            <h2>Outcome</h2>
+            <ul>
+              <li>74% of active app users adopted the digital card within 60 days of launch — exceeding the 12-month goal.</li>
+              <li>App store rating increased from 3.1 to 4.6 stars, with digital card cited in 38% of positive reviews.</li>
+              <li>Accessibility audit score improved from 61% to 98% WCAG AA compliance.</li>
+              <li>Support contacts related to card retrieval dropped 81%.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ NEXT CASE ░░ -->
+    <section class="next-case" aria-label="Next project">
+      <div class="container">
+        <p class="next-case__label">Back to start</p>
+        <a href="cmt-risk-score.html" class="next-case__link">
+          <h2 class="next-case__title">CMT Risk Score →</h2>
+          <p style="color: var(--clr-text-2); font-size: var(--fs-md); margin-top: var(--space-2);">Healthcare · Data Visualization · SaaS</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="footer" aria-label="Footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="../index.html" class="nav__logo">
+            <span class="nav__logo-mark">AD</span>
+            <span class="nav__logo-name">Alex Doe</span>
+          </a>
+          <p class="footer__tagline">Designing with purpose.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <div class="footer__nav-col">
+            <span class="footer__nav-heading">Navigation</span>
+            <a href="../index.html#work">Work</a>
+            <a href="../about.html">About</a>
+            <a href="../projects.html">All Projects</a>
+          </div>
+          <div class="footer__nav-col">
+            <span class="footer__nav-heading">Projects</span>
+            <a href="cmt-risk-score.html">CMT Risk Score</a>
+            <a href="review-center.html">Review Center</a>
+            <a href="driving-insights.html">Driving Insights</a>
+            <a href="insurance-card.html">Insurance Card</a>
+          </div>
+          <div class="footer__nav-col">
+            <span class="footer__nav-heading">Connect</span>
+            <a href="mailto:hello@alexdoe.com">Email</a>
+            <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="#" target="_blank" rel="noopener">Dribbble</a>
+            <a href="#" target="_blank" rel="noopener">Read.cv</a>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">&copy; 2025 Alex Doe. All rights reserved.</span>
+        <button class="footer__top-btn" id="backToTop" aria-label="Back to top">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3M3 8l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back to top
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
