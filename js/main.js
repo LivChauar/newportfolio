@@ -299,6 +299,9 @@ const qsa = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   });
 
   internalLinks.forEach(link => {
+    // Skip tag links on the projects page — handled by the filter
+    if (link.classList.contains('tag') && link.closest('.projects-grid')) return;
+
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
       e.preventDefault();
@@ -306,4 +309,55 @@ const qsa = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
       setTimeout(() => { window.location.href = href; }, 300);
     });
   });
+})();
+
+/* ── 11. TAG FILTER (projects page) ─────────────────────── */
+(function initTagFilter() {
+  const filterBtns = qsa('.filter-btn');
+  const grid       = qs('.projects-grid');
+  if (!filterBtns.length || !grid) return;
+
+  const cards = qsa('.project-card[data-tags]', grid);
+
+  const setFilter = (tag) => {
+    // Update active button
+    filterBtns.forEach(btn =>
+      btn.classList.toggle('active', btn.dataset.filter === tag)
+    );
+
+    // Show / hide cards
+    cards.forEach(card => {
+      const cardTags = (card.dataset.tags || '').split(' ');
+      card.classList.toggle(
+        'card-hidden',
+        tag !== 'all' && !cardTags.includes(tag)
+      );
+    });
+
+    // Reflect in URL without a full navigation
+    const url = new URL(window.location.href);
+    if (tag === 'all') url.searchParams.delete('tag');
+    else url.searchParams.set('tag', tag);
+    history.replaceState(null, '', url);
+  };
+
+  // Filter-button clicks
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => setFilter(btn.dataset.filter));
+  });
+
+  // Tag-link clicks within the grid — filter in-place, skip page transition
+  qsa('a.tag', grid).forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const url = new URL(link.href, window.location.href);
+      const tag = url.searchParams.get('tag') || 'all';
+      setFilter(tag);
+    });
+  });
+
+  // Apply tag from URL on initial load (e.g. arriving from index.html)
+  const initial = new URLSearchParams(window.location.search).get('tag') || 'all';
+  setFilter(initial);
 })();
