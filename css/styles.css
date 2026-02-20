@@ -542,12 +542,13 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   display: flex;
   flex-direction: column;
   font-family: var(--ff-serif);
-  font-size: clamp(var(--fs-3xl), 8vw, var(--fs-5xl));
-  font-weight: 400;
-  line-height: 1.08;
-  letter-spacing: -0.03em;
+  font-size: clamp(3rem, 10vw, 9rem);
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.04em;
   color: var(--clr-text);
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-10);
+  max-width: none;
 }
 
 .hero__title-line {
