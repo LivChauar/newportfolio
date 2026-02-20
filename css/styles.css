@@ -542,12 +542,12 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   display: flex;
   flex-direction: column;
   font-family: var(--ff-serif);
-  font-size: clamp(3rem, 10vw, 9rem);
-  font-weight: 800;
-  line-height: 1.0;
-  letter-spacing: -0.04em;
+  font-size: clamp(2rem, 5vw, 5rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
   color: var(--clr-text);
-  margin-bottom: var(--space-10);
+  margin-bottom: var(--space-8);
   max-width: none;
 }
 
