@@ -541,14 +541,14 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .hero__title {
   display: flex;
   flex-direction: column;
-  font-family: var(--ff-serif);
+  font-family: 'Bungee Shade', var(--ff-serif);
   font-size: clamp(2.5rem, 12vw, 5rem);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.03em;
-  color: var(--clr-text);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: cyan;
   margin-bottom: var(--space-8);
-  max-width: none;
+  max-width: 66.667%;
 }
 
 .hero__title-line {
@@ -556,7 +556,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   overflow: hidden;
 }
 
-.hero__title-line--accent { color: var(--clr-gold); font-style: italic; }
+.hero__title-line--accent { color: cyan; font-style: normal; }
 
 .hero__sub {
   font-size: clamp(var(--fs-base), 2vw, var(--fs-lg));
