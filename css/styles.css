@@ -541,38 +541,43 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .hero__title {
   display: flex;
   flex-direction: column;
-  font-family: 'Bungee', var(--ff-serif);
   font-size: clamp(2.5rem, 12vw, 5rem);
   font-weight: 400;
-  line-height: 1.45;
+  line-height: 1.1;
   letter-spacing: 0.01em;
   text-transform: uppercase;
-  color: #A8FFD8;
   margin-bottom: var(--space-8);
   max-width: none;
 }
 
+/* Grid stacking: both layers share the same cell, DOM order = paint order */
 .hero__title-line {
-  display: block;
-  position: relative;
+  display: grid;
 }
 
-/* Bungee Shade (black) underneath — the depth/shadow layer */
-.hero__title-line::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-family: 'Bungee Shade', sans-serif;
+.hero__title-line__shade,
+.hero__title-line__fill {
+  grid-area: 1 / 1;   /* same cell — stacked */
   font-size: inherit;
   font-weight: 400;
   letter-spacing: inherit;
   text-transform: inherit;
-  color: #111;
-  pointer-events: none;
+  line-height: inherit;
 }
 
-.hero__title-line--accent { color: #A8FFD8; font-style: normal; }
+/* Shade: Bungee Shade in near-black — paints first (behind) */
+.hero__title-line__shade {
+  font-family: 'Bungee Shade', sans-serif;
+  color: #111;
+}
+
+/* Fill: regular Bungee in mint — paints second (on top) */
+.hero__title-line__fill {
+  font-family: 'Bungee', sans-serif;
+  color: #A8FFD8;
+}
+
+.hero__title-line--accent { font-style: normal; }
 
 .hero__sub {
   font-size: clamp(var(--fs-base), 2vw, var(--fs-lg));
